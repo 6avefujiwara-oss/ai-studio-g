@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI見積もりシミュレーター | AI Studio g</title>
+    <meta name="description" content="AI Studio gの見積もりシミュレーター。必要な機能を選ぶだけで、概算費用をすぐに確認できます。">
+    <meta property="og:title" content="AI見積もりシミュレーター | AI Studio g">
+    <meta property="og:type" content="article">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="AI Studio g" class="logo-icon">
+                <span><span class="logo-text">AI</span> Studio g</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="features.html">特徴</a></li>
+                    <li><a href="portfolio.html">制作実績</a></li>
+                    <li><a href="process.html">仕組み</a></li>
+                    <li><a href="pricing.html">料金</a></li>
+                    <li><a href="demo.html">デモ(β)</a></li>
+                    <li><a href="news.html">お知らせ</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="mypage.html">マイページ</a></li>
+                    <li><a href="contact.html" class="btn btn-primary sm">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="page-main section">
+        <div class="container glass" style="padding: 3rem; max-width: 800px;">
+            <div class="section-header center">
+                <h1 class="page-title">AI Estimate</h1>
+                <p class="section-subtitle">見積もりシミュレーター</p>
+            </div>
+
+            <form id="estimate-form" style="display: flex; flex-direction: column; gap: 2rem;">
+                <div class="form-group">
+                    <label>Q1. サイトのページ数は？</label>
+                    <select class="form-select"
+                        style="width: 100%; padding: 12px; border-radius: 8px; background: rgba(0,0,0,0.3); color: white; border: 1px solid rgba(255,255,255,0.2);">
+                        <option value="10">1ページ (LP)</option>
+                        <option value="25">5ページ (標準)</option>
+                        <option value="50">10ページ以上</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Q2. 必要な機能は？ (複数選択可)</label>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                        <label><input type="checkbox" value="5"> お問い合わせフォーム</label>
+                        <label><input type="checkbox" value="10"> CMS (ブログ機能)</label>
+                        <label><input type="checkbox" value="5"> 予約システム連携</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Q3. デザインのこだわり</label>
+                    <select class="form-select"
+                        style="width: 100%; padding: 12px; border-radius: 8px; background: rgba(0,0,0,0.3); color: white; border: 1px solid rgba(255,255,255,0.2);">
+                        <option value="0">AIにお任せ (最安)</option>
+                        <option value="10">デザイナーが調整 (+10万円)</option>
+                        <option value="30">フルオーダーメイド (+30万円)</option>
+                    </select>
+                </div>
+
+                <div class="center" style="margin-top: 2rem;">
+                    <button type="button" class="btn btn-primary" onclick="alert('概算見積もり: 約 25万円 (税抜)')">計算する</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">AI Studio g</div>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="company.html">会社概要</a></li>
+                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                    </ul>
+                </nav>
+                <p class="copyright">&copy; 2024 AI Studio g. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

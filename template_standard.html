@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【Standard Plan】山科リノベーション | 地域密着の工務店</title>
+    <meta name="description" content="京都市山科区でリフォーム・リノベーションなら山科リノベーションへ。創業50年の信頼と実績。">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- Standard Plan CSS --- */
+        :root {
+            --primary-color: #0056b3; /* 信頼の青 */
+            --secondary-color: #f8f9fa; /* 薄いグレー */
+            --text-color: #333;
+            --accent-color: #e63946; /* お問い合わせ用アクセント */
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; padding: 0; }
+
+        /* ヘッダー：企業の顔 */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        .nav-menu a:hover::after { width: 100%; }
+
+        .btn-contact {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
+        .btn-contact:hover { opacity: 0.8; }
+
+        /* ヒーローエリア */
+        .hero {
+            background: linear-gradient(rgba(0, 86, 179, 0.7), rgba(0, 86, 179, 0.5)), url('https://placehold.jp/1200x600.png?text=Renovation+House') center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; }
+
+        .btn-hero {
+            background-color: white;
+            color: var(--primary-color);
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* コンテンツ幅の共通設定 */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        h2.section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 50px;
+        }
+
+        /* 3つの強み (Features) */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 30px;
+            background: var(--secondary-color);
+            border-radius: 8px;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        /* 施工事例 (Works) */
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .work-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .work-card:hover { transform: translateY(-5px); }
+
+        .work-content { padding: 15px; }
+        .work-title { font-weight: bold; margin-bottom: 10px; display: block; }
+        .work-tag { font-size: 0.8rem; color: #666; background: #eee; padding: 2px 8px; border-radius: 4px; }
+
+        /* お知らせ (News) - ビジネスサイトらしさ */
+        .news-section { background-color: var(--secondary-color); }
+        
+        .news-list {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .news-item {
+            display: flex;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .news-item:last-child { border-bottom: none; }
+        
+        .news-date { width: 120px; color: #888; }
+
+        /* お問い合わせ */
+        .contact-cta {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .contact-cta h2 { color: white; margin-bottom: 20px; }
+
+        /* フッター */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 20px;
+        }
+        
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .footer-info h3 { border-left: 4px solid var(--accent-color); padding-left: 10px; margin-bottom: 15px; }
+
+        @media (max-width: 768px) {
+            .nav-menu { display: none; } /* スマホではメニュー非表示（簡易版） */
+            .header-container { justify-content: center; }
+            .news-item { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">🏠 山科リノベーション</div>
+            <nav class="nav-menu">
+                <a href="#">ホーム</a>
+                <a href="#">私たちについて</a>
+                <a href="#">施工事例</a>
+                <a href="#">サービス案内</a>
+                <a href="#" class="btn-contact">お問い合わせ</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>暮らしを、もっと豊かに。</h1>
+            <p>山科で50年。地域の皆様に愛される住まいづくり。</p>
+            <a href="#" class="btn-hero">無料相談はこちら</a>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="section-title">選ばれる3つの理由</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">🤝</div>
+                <h3>地域密着の安心感</h3>
+                <p>何かあればすぐに駆けつけます。山科区を知り尽くしたスタッフが対応します。</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">💰</div>
+                <h3>明朗会計</h3>
+                <p>追加費用のない分かりやすい見積もり。お客様が納得するまで工事は始めません。</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🛠️</div>
+                <h3>熟練の職人技</h3>
+                <p>経験20年以上のベテラン職人が施工。見えない部分までこだわります。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section">
+        <div class="container">
+            <h2 class="section-title">お知らせ</h2>
+            <div class="news-list">
+                <div class="news-item">
+                    <span class="news-date">2026.01.25</span>
+                    <span class="news-title">春のリフォームキャンペーンを開始しました</span>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">2026.01.10</span>
+                    <span class="news-title">施工事例に「M様邸 キッチン改装」を追加しました</span>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">2025.12.28</span>
+                    <span class="news-title">年末年始休業のお知らせ</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="section-title">施工事例</h2>
+        <div class="works-grid">
+            <div class="work-card">
+                <img src="https://placehold.jp/400x300.png?text=Kitchen" alt="キッチン">
+                <div class="work-content">
+                    <span class="work-title">明るいキッチンへ改装</span>
+                    <span class="work-tag">水回り</span>
+                </div>
+            </div>
+            <div class="work-card">
+                <img src="https://placehold.jp/400x300.png?text=Living" alt="リビング">
+                <div class="work-content">
+                    <span class="work-title">和室を広々リビングに</span>
+                    <span class="work-tag">内装</span>
+                </div>
+            </div>
+            <div class="work-card">
+                <img src="https://placehold.jp/400x300.png?text=Bath" alt="お風呂">
+                <div class="work-content">
+                    <span class="work-title">バリアフリー浴室</span>
+                    <span class="work-tag">介護・バリアフリー</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-cta">
+        <h2>お住まいの悩み、ご相談ください</h2>
+        <p>現地調査・お見積もりは無料です。</p>
+        <br>
+        <a href="#" class="btn-hero" style="color: var(--accent-color);">お問い合わせフォーム</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>山科リノベーション</h3>
+                <p>〒607-0000 京都市山科区〇〇町 1-2-3</p>
+                <p>TEL: 075-000-0000</p>
+                <p>京都府知事許可 (般-8) 第0000号</p>
+            </div>
+            <div class="footer-links">
+                <h3>メニュー</h3>
+                <ul>
+                    <li><a href="#">ホーム</a></li>
+                    <li><a href="#">会社概要</a></li>
+                    <li><a href="#">プライバシーポリシー</a></li>
+                </ul>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 40px; color: #888; font-size: 0.8rem;">
+            &copy; 2026 Yamashina Renovation. Designed by AI Studio g.
+        </p>
+    </footer>
+
+</body>
+</html>

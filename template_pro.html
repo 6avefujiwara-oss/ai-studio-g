@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【Pro Plan】G-Tech Solutions | 未来を創るAIパートナー</title>
+    <meta name="description" content="最先端のAI技術でビジネスを加速させる。G-Tech Solutionsの公式サイトです。">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- Pro Plan CSS (Dark Theme) --- */
+        :root {
+            --bg-color: #0f172a; /* 深い紺色（ほぼ黒） */
+            --text-color: #f1f5f9; /* オフホワイト */
+            --primary-color: #38bdf8; /* ネオンブルー */
+            --secondary-color: #1e293b; /* セクション背景用 */
+            --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%); /* グラデーション */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; padding: 0; }
+
+        /* ヘッダー：透過＆固定 */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+
+        .nav-menu { display: flex; gap: 40px; }
+        .nav-menu a { font-size: 0.9rem; letter-spacing: 0.05em; opacity: 0.8; }
+        .nav-menu a:hover { opacity: 1; color: var(--primary-color); }
+
+        .btn-header {
+            padding: 10px 25px;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 30px;
+            font-size: 0.9rem;
+        }
+        .btn-header:hover { background: var(--primary-color); color: var(--bg-color); }
+
+        /* ヒーローエリア：動画背景風 */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+            overflow: hidden;
+        }
+
+        /* 背景のアニメーション装飾 */
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.1) 0%, transparent 50%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        .hero-content { position: relative; z-index: 1; max-width: 800px; padding: 20px; }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p { font-size: 1.2rem; color: #94a3b8; margin-bottom: 40px; }
+
+        .btn-gradient {
+            background: var(--accent-gradient);
+            color: white;
+            padding: 18px 50px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+            display: inline-block;
+        }
+        .btn-gradient:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(56, 189, 248, 0.5); }
+
+        /* セクション共通 */
+        section { padding: 100px 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        .section-title span { color: var(--primary-color); }
+
+        /* サービス (カードデザイン) */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--secondary-color);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: 0.3s;
+        }
+        .service-card:hover { border-color: var(--primary-color); transform: translateY(-5px); }
+
+        .service-icon { font-size: 3rem; margin-bottom: 20px; display: block; }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+        .service-card p { color: #94a3b8; }
+
+        /* 実績 (数字で語る) */
+        .stats-section {
+            background: var(--secondary-color);
+            text-align: center;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 50px;
+            margin-top: 50px;
+        }
+        .stat-number { font-size: 3.5rem; font-weight: bold; color: var(--primary-color); display: block; }
+        .stat-label { font-size: 1rem; color: #94a3b8; }
+
+        /* ニュース (リストデザイン) */
+        .news-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: 0.3s;
+        }
+        .news-item:hover { padding-left: 20px; border-color: var(--primary-color); }
+        .news-date { color: var(--primary-color); font-weight: bold; margin-right: 30px; }
+
+        /* フッター */
+        footer {
+            background: #020617;
+            padding: 80px 20px 40px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        .footer-logo { font-size: 1.5rem; font-weight: bold; margin-bottom: 20px; display: inline-block; }
+        .footer-links { display: flex; gap: 30px; margin-top: 20px; color: #94a3b8; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-menu { display: none; }
+            .news-item { flex-direction: column; align-items: flex-start; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">G-Tech</div>
+        <nav class="nav-menu">
+            <a href="#">Solutions</a>
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact</a>
+        </nav>
+        <a href="#" class="btn-header">Start Project</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>AIで、<br>不可能を可能にする。</h1>
+            <p>We build the future with Intelligence. 次世代のビジネスソリューション。</p>
+            <a href="#" class="btn-gradient">無料コンサルティング</a>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="section-title">Our <span>Services</span></h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <span class="service-icon">🤖</span>
+                <h3>AI Development</h3>
+                <p>業務効率化のためのカスタムAIモデル開発。データ分析から実装まで。</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">🌐</span>
+                <h3>Web Transformation</h3>
+                <p>ただのWebサイトではない、ビジネスを成長させるプラットフォーム構築。</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">🛡️</span>
+                <h3>Cyber Security</h3>
+                <p>最新の脅威から企業の資産を守る、鉄壁のセキュリティ対策。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <h2 class="section-title">Why <span>G-Tech?</span></h2>
+            <p style="color:#94a3b8; max-width:600px; margin:0 auto;">創業以来、私たちは結果にこだわり続けてきました。</p>
+            <div class="stats-grid">
+                <div>
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div>
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+                <div>
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Support Available</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="section-title">Latest <span>News</span></h2>
+        <div class="news-list">
+            <a href="#" class="news-item">
+                <span class="news-date">2026.01.25</span>
+                <span class="news-title">シリーズBラウンドで30億円の資金調達を実施しました</span>
+            </a>
+            <a href="#" class="news-item">
+                <span class="news-date">2026.01.12</span>
+                <span class="news-title">新オフィス「Kyoto Innovation Hub」を開設</span>
+            </a>
+            <a href="#" class="news-item">
+                <span class="news-date">2025.12.20</span>
+                <span class="news-title">AI導入支援の実績が500社を突破しました</span>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span class="logo footer-logo">G-Tech Solutions</span>
+            <p style="color: #64748b;">Kyoto, Japan</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
+            <p style="margin-top: 50px; color: #475569; font-size: 0.8rem;">
+                &copy; 2026 G-Tech Solutions. Powered by AI Studio g.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

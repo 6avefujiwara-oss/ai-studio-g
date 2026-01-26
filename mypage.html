@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マイページ | AI Studio g</title>
+    <meta name="description" content="AI Studio gのお客様専用マイページ。制作進捗の確認、メッセージのやり取り、デザインプレビューの確認が可能です。">
+    <meta property="og:title" content="マイページ | AI Studio g">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="assets/hero-image.png">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles moved to style.css */
+    </style>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="AI Studio g" class="logo-icon">
+                <span><span class="logo-text">AI</span> Studio g</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="features.html">特徴</a></li>
+                    <li><a href="portfolio.html">制作実績</a></li>
+                    <li><a href="process.html">仕組み</a></li>
+                    <li><a href="pricing.html">料金</a></li>
+                    <li><a href="demo.html">デモ(β)</a></li>
+                    <li><a href="news.html">お知らせ</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="mypage.html" class="active">マイページ</a></li>
+                    <li><a href="contact.html" class="btn btn-primary sm">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="page-main section">
+        <div class="container">
+            <div class="user-welcome glass">
+                <div class="user-avatar">Y</div>
+                <div>
+                    <h2>ようこそ、山田 様</h2>
+                    <p>スタンダードプラン | ID: 8823491</p>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Main Content: Progress & Preview -->
+                <div class="dashboard-main">
+                    <div class="dashboard-card glass">
+                        <h3 class="section-title-sm">現在の制作進捗</h3>
+                        <div class="status-timeline">
+                            <div class="status-item completed">
+                                <span class="status-date">2024.10.01</span>
+                                <h4>ヒアリング完了</h4>
+                                <p>ご要望のヒアリングシートを受領しました。</p>
+                            </div>
+                            <div class="status-item completed">
+                                <span class="status-date">2024.10.02</span>
+                                <h4>AI構成案作成</h4>
+                                <p>AIによるサイトマップと構成案が承認されました。</p>
+                            </div>
+                            <div class="status-item active">
+                                <span class="status-date">現在進行中</span>
+                                <h4>デザイン生成 & 調整</h4>
+                                <p>AIがデザインを生成中です。デザイナーによる最終調整を行っています。<br>完了予定日: 2024.10.05</p>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-date">未着手</span>
+                                <h4>最終確認 & 公開</h4>
+                                <p>お客様による最終確認後、Web上に公開します。</p>
+                            </div>
+                        </div>
+
+                        <h3 class="section-title-sm mt-3">最新のデザインプレビュー</h3>
+                        <div class="preview-box">
+                            <img src="assets/portfolio-2.png" alt="Design Preview">
+                            <div class="preview-overlay">
+                                <button class="btn btn-primary">プレビューを見る</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar: Messages & Support -->
+                <div class="dashboard-sidebar">
+                    <div class="dashboard-card glass">
+                        <h3 class="section-title-sm">メッセージ</h3>
+                        <ul class="message-list">
+                            <li class="message-item">
+                                <div class="message-meta">
+                                    <span>AIサポート</span>
+                                    <span>2時間前</span>
+                                </div>
+                                <p>デザインの生成が80%完了しました。ご確認をお願いします。</p>
+                            </li>
+                            <li class="message-item">
+                                <div class="message-meta">
+                                    <span>藤原 (担当)</span>
+                                    <span>昨日</span>
+                                </div>
+                                <p>先日はお打ち合わせありがとうございます。追加資料を確認いたしました。</p>
+                            </li>
+                        </ul>
+                        <div class="center center-btn">
+                            <a href="contact.html" class="btn btn-secondary sm full-width">メッセージを送る</a>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card glass mt-2">
+                        <h3 class="section-title-sm">クイックアクション</h3>
+                        <div class="dashboard-actions">
+                            <button class="btn btn-outline sm">詳細設定の変更</button>
+                            <button class="btn btn-outline sm">プランのアップグレード</button>
+                            <button class="btn btn-outline sm">ログアウト</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">AI Studio g</div>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="company.html">会社概要</a></li>
+                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                    </ul>
+                </nav>
+                <p class="copyright">&copy; 2024 AI Studio g. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
