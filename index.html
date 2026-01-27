@@ -1,126 +1,43 @@
 ﻿<!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="rovTbO0M-8Y5WTfrgXkttlMX-1cMJb4E-u4YW-4N0A4" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Studio g - AIで、Web制作をもっと自由になる。</title>
-    <meta name="description" content="AIを活用して、高品質なウェブサイトを素早く、安価に作成します。従来のWeb制作の常識を覆す新しい体験を。AI Studio g公式サイト。">
-    <meta property="og:title" content="AI Studio g - AIで、Web制作をもっと自由になる。">
-    <meta property="og:description" content="AIを活用して、高品質なウェブサイトを素早く、安価に作成します。業界最安水準・最短3日納品。">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/hero-image.png">
-    <link rel="icon" href="assets/logo.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;600;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>AI Studio G - Portfolio</title>
+    <style>
+        body { font-family: "Helvetica Neue", Arial, sans-serif; background-color: #f4f4f4; color: #333; text-align: center; padding: 50px 20px; }
+        h1 { font-size: 2.5em; margin-bottom: 10px; }
+        p { color: #666; margin-bottom: 40px; }
+        .menu { max-width: 600px; margin: 0 auto; display: grid; gap: 20px; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-decoration: none; color: #333; transition: transform 0.2s; display: block; }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .card h2 { margin: 0 0 10px 0; color: #0056b3; }
+        .card span { font-size: 0.9em; color: #888; }
+        .disabled { opacity: 0.6; pointer-events: none; }
+    </style>
 </head>
-
 <body>
-    <div class="background-blobs">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
+
+    <h1>AI Studio G</h1>
+    <p>Web Design & AI Solutions</p>
+
+    <div class="menu">
+        <a href="template_light.html" class="card">
+            <h2>🍵 Light Plan</h2>
+            <span>和風カフェ・飲食店向けデザイン</span><br>
+            <strong>【ここをクリックして見る】</strong>
+        </a>
+
+        <div class="card disabled">
+            <h2>🔨 Standard Plan</h2>
+            <span>リフォーム・工務店向け（準備中）</span>
+        </div>
+
+        <div class="card disabled">
+            <h2>💻 Pro Plan</h2>
+            <span>IT企業・スタジオ向け（準備中）</span>
+        </div>
     </div>
 
-    <header class="header">
-        <div class="container header-container">
-            <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="AI Studio g" class="logo-icon">
-                <span><span class="logo-text">AI</span> Studio g</span>
-            </a>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li><a href="features.html">特徴</a></li>
-                    <li><a href="portfolio.html">制作実績</a></li>
-                    <li><a href="process.html">仕組み</a></li>
-                    <li><a href="pricing.html">料金</a></li>
-                    <li><a href="demo.html">デモ(β)</a></li>
-                    <li><a href="news.html">お知らせ</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="mypage.html">マイページ</a></li>
-                    <li><a href="contact.html" class="btn btn-primary sm">お問い合わせ</a></li>
-                </ul>
-            </nav>
-            <button class="mobile-menu-toggle" aria-label="メニューを開く">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <span class="badge">次世代のWeb制作</span>
-                    <h1 class="hero-title">AIで、Web制作は<br>もっと<span class="gradient-text">自由</span>になる。</h1>
-                    <p class="hero-description">
-                        もう、高額な制作費や長い納期に悩む必要はありません。<br>
-                        AIの力を活用し、驚くほど高品質なウェブサイトを、<br>
-                        かつてないスピードと低価格で提供します。
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="contact.html" class="btn btn-primary">無料で相談する</a>
-                        <a href="features.html" class="btn btn-secondary">詳しく見る</a>
-                    </div>
-                </div>
-                <div class="hero-image-wrapper">
-                    <div class="hero-image-card glass">
-                        <img src="assets/hero-image.png" alt="AI Web Creation Interface" class="hero-image">
-                        <div class="floating-ui ui-1 glass">
-                            <span class="icon">🚀</span>
-                            <div class="text">
-                                <span class="label">スピード</span>
-                                <span class="value">10倍速</span>
-                            </div>
-                        </div>
-                        <div class="floating-ui ui-2 glass">
-                            <span class="icon">💰</span>
-                            <div class="text">
-                                <span class="label">コスト</span>
-                                <span class="value">1/5の価格</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="banner" class="banner section">
-            <div class="container banner-container glass">
-                <div class="banner-content">
-                    <h2>今すぐ、新しいWeb制作を体験しよう</h2>
-                    <p>まずは無料相談から。あなたのビジネスに最適なプランをご提案します。</p>
-                </div>
-                <div class="banner-action">
-                    <a href="contact.html" class="btn btn-primary white">お問い合わせ</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">AI Studio g</div>
-                <nav class="footer-nav">
-                    <ul>
-                        <li><a href="index.html">ホーム</a></li>
-                        <li><a href="company.html">会社概要</a></li>
-                        <li><a href="privacy.html">プライバシーポリシー</a></li>
-                    </ul>
-                </nav>
-                <p class="copyright">&copy; 2024 AI Studio g. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
 </body>
-
 </html>

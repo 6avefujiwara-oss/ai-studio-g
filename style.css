@@ -271,6 +271,16 @@ h3,
     color: var(--primary-color);
 }
 
+.nav-list a.active {
+    color: var(--primary-color);
+    opacity: 1;
+    font-weight: 700;
+}
+
+.btn.active {
+    box-shadow: 0 0 0 2px var(--bg-color), 0 0 0 4px var(--primary-color);
+}
+
 .mobile-menu-toggle {
     display: none;
     background: none;
