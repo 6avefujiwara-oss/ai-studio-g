@@ -1,42 +1,61 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>【Standard Plan】山科リノベーション | 地域密着の工務店</title>
     <meta name="description" content="京都市山科区でリフォーム・リノベーションなら山科リノベーションへ。創業50年の信頼と実績。">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 
     <style>
-        /* --- Standard Plan CSS --- */
+        /* --- Standard Plan CSS (AI Studio g Design) --- */
         :root {
-            --primary-color: #0056b3; /* 信頼の青 */
-            --secondary-color: #f8f9fa; /* 薄いグレー */
-            --text-color: #333;
-            --accent-color: #e63946; /* お問い合わせ用アクセント */
+            /* 色設計：日本の伝統色を意識した「信頼」と「温もり」の配色 */
+            --primary-color: #1a374d;
+            /* 鉄紺（てつこん）：深く濃い紺色。信頼感。 */
+            --secondary-color: #f4f4f0;
+            /* 練色（ねりいろ）：わずかに黄みのある白。優しさ。 */
+            --accent-color: #d35400;
+            /* 柿色：温かみのあるアクセント。 */
+            --text-color: #333333;
+            --white: #ffffff;
         }
 
         body {
             font-family: 'Noto Sans JP', sans-serif;
             color: var(--text-color);
-            line-height: 1.6;
+            line-height: 1.8;
+            /* 行間を広げて読みやすく */
             margin: 0;
             padding: 0;
+            background-color: var(--white);
         }
 
-        a { text-decoration: none; color: inherit; }
-        ul { list-style: none; padding: 0; }
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
 
-        /* ヘッダー：企業の顔 */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* ヘッダー */
         header {
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background-color: rgba(255, 255, 255, 0.95);
+            /* 少し透けさせる */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             position: sticky;
             top: 0;
             z-index: 1000;
+            padding: 10px 0;
         }
 
         .header-container {
@@ -45,53 +64,57 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 20px;
+            padding: 0 20px;
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 700;
             color: var(--primary-color);
             display: flex;
             align-items: center;
-            gap: 10px;
+            letter-spacing: 0.05em;
         }
 
         .nav-menu {
             display: flex;
             gap: 30px;
+            align-items: center;
         }
 
         .nav-menu a {
             font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--primary-color);
             position: relative;
         }
 
-        .nav-menu a::after {
-            content: '';
-            display: block;
-            width: 0;
-            height: 2px;
-            background: var(--primary-color);
-            transition: width 0.3s;
+        .nav-menu a:hover {
+            color: var(--accent-color);
         }
-
-        .nav-menu a:hover::after { width: 100%; }
 
         .btn-contact {
             background-color: var(--accent-color);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 4px;
+            color: white !important;
+            padding: 12px 25px;
+            border-radius: 50px;
+            /* 丸みをつけて親しみやすく */
             font-weight: bold;
-            transition: opacity 0.3s;
+            box-shadow: 0 4px 6px rgba(211, 84, 0, 0.2);
         }
-        .btn-contact:hover { opacity: 0.8; }
+
+        .btn-contact:hover {
+            background-color: #e67e22;
+            transform: translateY(-2px);
+        }
 
         /* ヒーローエリア */
         .hero {
-            background: linear-gradient(rgba(0, 86, 179, 0.7), rgba(0, 86, 179, 0.5)), url('https://placehold.jp/1200x600.png?text=Renovation+House') center/cover;
-            height: 500px;
+            /* 写真の上に暗いグラデーションを重ねて文字を見やすく */
+            background: linear-gradient(rgba(26, 55, 77, 0.6), rgba(26, 55, 77, 0.4)), url('images/standard_hero.png') center/cover;
+            height: 60vh;
+            /* 画面の高さの60% */
+            min-height: 450px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -99,111 +122,234 @@
             color: white;
         }
 
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeIn 1.5s ease;
         }
 
-        .hero p { font-size: 1.2rem; margin-bottom: 30px; }
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            letter-spacing: 0.1em;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
 
         .btn-hero {
             background-color: white;
             color: var(--primary-color);
-            padding: 15px 40px;
+            padding: 15px 50px;
             border-radius: 50px;
             font-weight: bold;
             font-size: 1.1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
-        /* コンテンツ幅の共通設定 */
+        .btn-hero:hover {
+            background-color: var(--secondary-color);
+            color: var(--accent-color);
+        }
+
+        /* コンテンツ共通 */
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 80px 20px;
+            padding: 100px 20px;
+        }
+
+        /* セクションごとの背景色切り替え */
+        .bg-gray {
+            background-color: var(--secondary-color);
+            background-image: url('images/standard_texture.png');
+            background-blend-mode: multiply;
+            /* 白っぽいテクスチャなのでmultiplyで馴染ませる */
+            background-size: 500px;
+            /* テクスチャのサイズ調整 */
         }
 
         h2.section-title {
             text-align: center;
             font-size: 2rem;
             color: var(--primary-color);
-            margin-bottom: 50px;
+            margin-bottom: 60px;
+            position: relative;
+            padding-bottom: 20px;
         }
 
-        /* 3つの強み (Features) */
+        /* タイトルの下線デザイン */
+        h2.section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        /* 3つの強み */
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 40px;
         }
 
         .feature-item {
             text-align: center;
-            padding: 30px;
-            background: var(--secondary-color);
-            border-radius: 8px;
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        /* 施工事例 (Works) */
-        .works-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .work-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
+            padding: 40px 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            /* ふんわりした影 */
             transition: transform 0.3s;
         }
 
-        .work-card:hover { transform: translateY(-5px); }
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
 
-        .work-content { padding: 15px; }
-        .work-title { font-weight: bold; margin-bottom: 10px; display: block; }
-        .work-tag { font-size: 0.8rem; color: #666; background: #eee; padding: 2px 8px; border-radius: 4px; }
+        .feature-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
 
-        /* お知らせ (News) - ビジネスサイトらしさ */
-        .news-section { background-color: var(--secondary-color); }
-        
+        .feature-item h3 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        /* 施工事例 */
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .work-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .work-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .work-content {
+            padding: 20px;
+        }
+
+        .work-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: block;
+            color: var(--primary-color);
+        }
+
+        .work-tag {
+            font-size: 0.8rem;
+            color: #666;
+            background: #eee;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        /* お知らせ */
         .news-list {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .news-item {
             display: flex;
+            align-items: center;
             padding: 15px 0;
             border-bottom: 1px solid #eee;
         }
-        .news-item:last-child { border-bottom: none; }
-        
-        .news-date { width: 120px; color: #888; }
 
-        /* お問い合わせ */
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-date {
+            width: 140px;
+            color: #888;
+            font-family: monospace;
+            /* 日付を等幅フォントに */
+            font-size: 0.95rem;
+        }
+
+        .news-title {
+            font-weight: 500;
+        }
+
+        /* お問い合わせCTA */
         .contact-cta {
             background-color: var(--primary-color);
             color: white;
             text-align: center;
-            padding: 60px 20px;
+            padding: 80px 20px;
         }
 
-        .contact-cta h2 { color: white; margin-bottom: 20px; }
+        .contact-cta h2 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .contact-cta p {
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .btn-cta-big {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 18px 60px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-cta-big:hover {
+            background-color: #e67e22;
+        }
 
         /* フッター */
         footer {
-            background-color: #333;
-            color: white;
-            padding: 40px 20px;
+            background-color: #222;
+            color: #ccc;
+            padding: 60px 20px 20px;
+            font-size: 0.9rem;
         }
-        
+
         .footer-content {
             max-width: 1000px;
             margin: 0 auto;
@@ -211,17 +357,85 @@
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 40px;
+            margin-bottom: 40px;
         }
 
-        .footer-info h3 { border-left: 4px solid var(--accent-color); padding-left: 10px; margin-bottom: 15px; }
+        .footer-info h3 {
+            color: white;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
 
+        .footer-links h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            font-size: 0.8rem;
+        }
+
+        /* アニメーション */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* レスポンシブ対応（スマホ） */
         @media (max-width: 768px) {
-            .nav-menu { display: none; } /* スマホではメニュー非表示（簡易版） */
-            .header-container { justify-content: center; }
-            .news-item { flex-direction: column; }
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                width: 100%;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .news-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+
+            .btn-hero,
+            .btn-cta-big {
+                width: 100%;
+                box-sizing: border-box;
+                display: block;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -229,44 +443,43 @@
             <div class="logo">🏠 山科リノベーション</div>
             <nav class="nav-menu">
                 <a href="#">ホーム</a>
-                <a href="#">私たちについて</a>
-                <a href="#">施工事例</a>
-                <a href="#">サービス案内</a>
-                <a href="#" class="btn-contact">お問い合わせ</a>
+                <a href="#features">選ばれる理由</a>
+                <a href="#works">施工事例</a>
+                <a href="#contact" class="btn-contact">お問い合わせ</a>
             </nav>
         </div>
     </header>
 
     <section class="hero">
-        <div>
+        <div class="hero-content">
             <h1>暮らしを、もっと豊かに。</h1>
             <p>山科で50年。地域の皆様に愛される住まいづくり。</p>
-            <a href="#" class="btn-hero">無料相談はこちら</a>
+            <a href="#contact" class="btn-hero">無料相談はこちら</a>
         </div>
     </section>
 
-    <section class="container">
+    <section id="features" class="container">
         <h2 class="section-title">選ばれる3つの理由</h2>
         <div class="features-grid">
             <div class="feature-item">
                 <div class="feature-icon">🤝</div>
                 <h3>地域密着の安心感</h3>
-                <p>何かあればすぐに駆けつけます。山科区を知り尽くしたスタッフが対応します。</p>
+                <p>何かあればすぐに駆けつけます。<br>山科区を知り尽くしたスタッフが対応します。</p>
             </div>
             <div class="feature-item">
                 <div class="feature-icon">💰</div>
                 <h3>明朗会計</h3>
-                <p>追加費用のない分かりやすい見積もり。お客様が納得するまで工事は始めません。</p>
+                <p>追加費用のない分かりやすい見積もり。<br>お客様が納得するまで工事は始めません。</p>
             </div>
             <div class="feature-item">
                 <div class="feature-icon">🛠️</div>
                 <h3>熟練の職人技</h3>
-                <p>経験20年以上のベテラン職人が施工。見えない部分までこだわります。</p>
+                <p>経験20年以上のベテラン職人が施工。<br>見えない部分までこだわります。</p>
             </div>
         </div>
     </section>
 
-    <section class="news-section">
+    <section class="bg-gray">
         <div class="container">
             <h2 class="section-title">お知らせ</h2>
             <div class="news-list">
@@ -286,7 +499,7 @@
         </div>
     </section>
 
-    <section class="container">
+    <section id="works" class="container">
         <h2 class="section-title">施工事例</h2>
         <div class="works-grid">
             <div class="work-card">
@@ -313,11 +526,10 @@
         </div>
     </section>
 
-    <section class="contact-cta">
+    <section id="contact" class="contact-cta">
         <h2>お住まいの悩み、ご相談ください</h2>
-        <p>現地調査・お見積もりは無料です。</p>
-        <br>
-        <a href="#" class="btn-hero" style="color: var(--accent-color);">お問い合わせフォーム</a>
+        <p>現地調査・お見積もりは無料です。お気軽にご連絡ください。</p>
+        <a href="#" class="btn-cta-big">お問い合わせフォーム</a>
     </section>
 
     <footer>
@@ -337,10 +549,12 @@
                 </ul>
             </div>
         </div>
-        <p style="text-align: center; margin-top: 40px; color: #888; font-size: 0.8rem;">
-            &copy; 2026 Yamashina Renovation. Designed by AI Studio g.
-        </p>
+        <div class="copyright">
+            &copy; 2026 Yamashina Renovation. Designed by <a href="index.html"
+                style="color: inherit; text-decoration: underline;">AI Studio g</a>.
+        </div>
     </footer>
 
 </body>
+
 </html>

@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>【Light Plan】茶房 ジー | 京都山科の隠れ家カフェ</title>
     <meta name="description" content="こだわりの抹茶と静寂の空間。京都山科にある和風モダンカフェ「茶房 ジー」の公式サイトです。">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Zen+Old+Mincho:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Zen+Old+Mincho:wght@400;700&display=swap"
+        rel="stylesheet">
 
     <style>
         /* --- CSS（デザイン設定） --- */
         :root {
-            --main-color: #4a5d45; /* 抹茶色 */
-            --accent-color: #c5a065; /* ゴールド/茶 */
-            --bg-color: #f9f7f2; /* 和紙っぽい白 */
+            --main-color: #4a5d45;
+            /* 抹茶色 */
+            --accent-color: #c5a065;
+            /* ゴールド/茶 */
+            --bg-color: #f9f7f2;
+            /* 和紙っぽい白 */
             --text-color: #333;
-            --font-main: 'Noto Serif JP', serif; /* 明朝体 */
+            --font-main: 'Noto Serif JP', serif;
+            /* 明朝体 */
         }
 
         * {
@@ -29,13 +36,23 @@
         body {
             font-family: var(--font-main);
             background-color: var(--bg-color);
+            background-image: url('images/light_texture.png');
+            /* 生成したリネン・紙テクスチャ */
             color: var(--text-color);
             line-height: 1.8;
             letter-spacing: 0.05em;
         }
 
-        a { text-decoration: none; color: inherit; }
-        img { max-width: 100%; height: auto; display: block; }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
 
         /* ヘッダー */
         header {
@@ -49,7 +66,7 @@
             justify-content: space-between;
             align-items: center;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
         .site-title {
@@ -76,7 +93,7 @@
         /* ヒーローエリア */
         .hero {
             height: 80vh;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/hero_cafe.png') center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/hero_cafe.png') center/cover;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -89,7 +106,7 @@
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             font-family: 'Zen Old Mincho', serif;
         }
 
@@ -128,11 +145,19 @@
             flex-wrap: wrap;
         }
 
-        .about-text { flex: 1; min-width: 300px; }
-        .about-image { flex: 1; min-width: 300px; }
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
         .about-image img {
             border-radius: 8px;
-            box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         /* メニュー (Menu) */
@@ -150,8 +175,21 @@
             text-align: center;
         }
 
-        .menu-item h3 { margin: 15px 0 10px; color: var(--main-color); }
-        .price { color: var(--accent-color); font-weight: bold; font-size: 1.1rem; }
+        .menu-item h3 {
+            margin: 15px 0 10px;
+            color: var(--main-color);
+        }
+
+        .menu-item p {
+            display: inline-block;
+            text-align: left;
+        }
+
+        .price {
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
 
         /* アクセス */
         .access-info {
@@ -159,7 +197,7 @@
             background-color: white;
             padding: 40px;
             border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
 
         .map-container {
@@ -183,9 +221,17 @@
 
         /* スマホ用 */
         @media (max-width: 600px) {
-            .hero h1 { font-size: 2rem; }
-            .nav-menu { display: none; }
-            .about-content { flex-direction: column; }
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -212,7 +258,7 @@
         <h2 class="section-title">こだわり</h2>
         <div class="about-content">
             <div class="about-image">
-                <img src="images/about_matcha.png" alt="抹茶の画像">"
+                <img src="images/room01.png" alt="部屋の画像">
             </div>
             <div class="about-text">
                 <p>
@@ -223,6 +269,12 @@
                 </p>
             </div>
         </div>
+    </section>
+
+    <!-- (Skipping Menu and Access sections for brevity in replacement, focusing on footer in next logic if needed, but tool requires contiguous block. Waiting for next tool call for footer if far apart) -->
+    <!-- Creating explicit replacement for the typo first -->
+
+    </div>
     </section>
 
     <section id="menu">
@@ -256,15 +308,40 @@
             <p>〒607-0000 京都市山科区〇〇町 1-2-3</p>
             <p>TEL: 075-000-0000</p>
             <p>営業時間: 10:00 - 18:00 (定休日: 水曜日)</p>
-            <div class="map-container">
-                <p>Google Map</p>
+            <div class="map-container"
+                style="display: block; position: relative; background: #e5e0d8; overflow: hidden; padding: 0; color: inherit;">
+                <!-- Dummy Map Visualization -->
+                <div
+                    style="position: absolute; top: 40%; left: 0; width: 100%; height: 25px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
+                </div>
+                <div
+                    style="position: absolute; top: 0; left: 60%; width: 25px; height: 100%; background: #fff; box-shadow: 1px 0 2px rgba(0,0,0,0.05);">
+                </div>
+                <div
+                    style="position: absolute; top: 20%; left: 0; width: 100%; height: 12px; background: #fff; opacity: 0.8;">
+                </div>
+                <div
+                    style="position: absolute; top: 0; left: 25%; width: 12px; height: 100%; background: #fff; opacity: 0.8;">
+                </div>
+
+                <!-- Pin -->
+                <div
+                    style="position: absolute; top: 32%; left: 58%; font-size: 3.5rem; color: #d35400; text-shadow: 2px 2px 5px rgba(0,0,0,0.2); transform: translate(-50%, -50%);">
+                    📍
+                </div>
+                <div
+                    style="position: absolute; bottom: 10px; right: 10px; font-size: 0.7rem; color: #888; background: rgba(255,255,255,0.8); padding: 2px 5px;">
+                    Map data &copy; Dummy Map
+                </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Sabo-G. Designed by AI Studio g.</p>
+        <p>&copy; 2026 Sabo-G. Designed by <a href="index.html" style="color: inherit; text-decoration: underline;">AI
+                Studio g</a>.</p>
     </footer>
 
 </body>
+
 </html>
